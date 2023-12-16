@@ -7,10 +7,7 @@ export default defineNuxtConfig({
     [
       '@pinia/nuxt',
       {
-        autoImports: [
-          // 自动引入 `defineStore()`
-          'defineStore'
-        ]
+        autoImports: ['defineStore']
       }
     ],
     ['@nuxtjs/tailwindcss'],
@@ -20,5 +17,8 @@ export default defineNuxtConfig({
   ],
   antd: {
     // Options
+  },
+  colorMode: {
+    classSuffix: ''
   }
 })

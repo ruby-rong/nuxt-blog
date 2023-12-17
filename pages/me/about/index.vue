@@ -6,5 +6,4 @@ definePageMeta({
 
 <template>
   <div>关于我</div>
-  <nuxt-link to="/">首 页</nuxt-link>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+console.log(colorMode)
 const handleTheme = (value: string) => {
   colorMode.preference = value
 }
@@ -15,7 +16,7 @@ const handleTheme = (value: string) => {
       color="#F0F0F0"
     />
     <Icon
-      v-else
+      v-if="$colorMode.preference === 'light'"
       class="cursor-pointer"
       @click="handleTheme('dark')"
       name="line-md:sunny-outline-loop"

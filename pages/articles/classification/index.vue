@@ -1,3 +1,3 @@
 <template>
-  <div>内容</div>
+  <div>分类</div>
 </template>

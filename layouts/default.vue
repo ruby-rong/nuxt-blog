@@ -1,10 +1,10 @@
 <template>
   <div>
-    <!-- <LayoutPageNavbar class="h-[64px] max-h-[64px]" />
-    <LayoutPageContent> -->
-    <slot />
-    <!-- </LayoutPageContent>
-
-    <LayoutPageFooter class="h-[52px] md:h-[42px]" /> -->
+    <Header class="h-16" />
+    <main class="min-h-[calc(100vh-128px)]">
+      <Content />
+      <slot />
+    </main>
+    <Footer class="h-16" />
   </div>
 </template>

@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  typescript: {
+    typeCheck: true
+  },
+  colorMode: {
+    preference: 'dark'
+  },
   devtools: { enabled: false },
-  loading: '~/components/loading.vue',
   css: ['~/static/main.css'],
   modules: [
     [
@@ -10,15 +15,9 @@ export default defineNuxtConfig({
         autoImports: ['defineStore']
       }
     ],
-    ['@nuxtjs/tailwindcss'],
-    ['@nuxtjs/color-mode'],
-    ['nuxt-icon'],
-    ['@ant-design-vue/nuxt']
-  ],
-  antd: {
-    // Options
-  },
-  colorMode: {
-    classSuffix: ''
-  }
+    // ['@nuxtjs/tailwindcss', {}],
+    // ['@nuxtjs/color-mode', {}],
+    ['nuxt-icon', {}],
+    ['@nuxt/ui', {}]
+  ]
 })

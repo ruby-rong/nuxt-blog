@@ -35,10 +35,13 @@ const ui = {
               v-for="(item, index) in links"
               :key="index"
             >
-              <div class="flex justify-center items-center space-x-1">
+              <NuxtLink
+                :to="item.url"
+                class="flex justify-center items-center space-x-1"
+              >
                 <Icon :name="item.icon" />
                 <span class="text-xl">{{ item.label }}</span>
-              </div>
+              </NuxtLink>
 
               <UVerticalNavigation
                 :ui="ui"

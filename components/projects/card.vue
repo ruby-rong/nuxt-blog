@@ -36,7 +36,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="flex h-[180px] cursor-pointer w-[380px] hover:bg-[#f5f5f5] hover:dark:bg-slate-700 justify-between px-4 items-center border dark:border-[#333]"
+    class="flex h-[180px] cursor-pointer w-[360px] hover:bg-[#f5f5f5] hover:dark:bg-slate-700 justify-between px-4 items-center border dark:border-[#333]"
   >
     <div class="space-y-1 flex flex-col justify-between">
       <div class="space-x-4">

@@ -1,0 +1,17 @@
+{
+  "name": "Feedbackjar",
+  "url": "https://feedbackjar.app",
+  "description": "Open source feedback, roadmaps and changelogs",
+  "thumbnail": "/projects/feedbackjar.png",
+  "status": "WIP",
+  "opensource": true,
+  "icon": "tdesign:system-log",
+  "tab": [
+    "logos:javascript",
+    "logos:nuxt-icon",
+    "logos:vue",
+    "logos:react",
+    "logos:react-query",
+    "logos:prisma"
+  ]
+}

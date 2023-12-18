@@ -15,9 +15,31 @@ export default defineNuxtConfig({
         autoImports: ['defineStore']
       }
     ],
-    // ['@nuxtjs/tailwindcss', {}],
-    // ['@nuxtjs/color-mode', {}],
+    ['@nuxt/content', {}],
     ['nuxt-icon', {}],
-    ['@nuxt/ui', {}]
-  ]
+    ['@nuxt/ui', {}],
+    ['@nuxt/image', {}],
+    ['@vueuse/nuxt', {}]
+  ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1'
+    }
+  },
+  content: {
+    experimental: {
+      search: {
+        indexed: true,
+        options: {
+          // 在这里提供其他选项的默认值
+          fields: ['title', 'description', 'body']
+        }
+      }
+    },
+    highlight: {
+      theme: 'github-dark'
+    }
+  }
 })

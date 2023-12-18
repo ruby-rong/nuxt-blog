@@ -1,37 +1,29 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-console.log(colorMode)
-const handleTheme = (value: string) => {
-  colorMode.preference = value
-}
+const handleTheme = () =>
+  colorMode.value === 'light'
+    ? (colorMode.preference = 'dark')
+    : (colorMode.preference = 'light')
 </script>
 
 <template>
   <div>
-    <Icon
+    <button
+      @click="handleTheme"
       class="cursor-pointer"
-      v-if="$colorMode.preference === 'dark'"
-      @click="handleTheme('light')"
-      name="line-md:sunny-outline-to-moon-loop-transition"
-      color="#F0F0F0"
-    />
-    <Icon
-      v-if="$colorMode.preference === 'light'"
-      class="cursor-pointer"
-      @click="handleTheme('dark')"
-      name="line-md:sunny-outline-loop"
-      color="#FFA500"
-    />
+    >
+      <template v-if="colorMode.value === 'dark'">
+        <Icon
+          name="line-md:sunny-outline-to-moon-loop-transition"
+          color="#F0F0F0"
+        />
+      </template>
+      <template v-else>
+        <Icon
+          name="line-md:sunny-outline-loop"
+          color="#FFA500"
+        />
+      </template>
+    </button>
   </div>
 </template>
-
-<style scoped>
-body {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.8);
-}
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-</style>

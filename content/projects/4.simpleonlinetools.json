@@ -1,0 +1,17 @@
+{
+  "name": "Simple Online Tools",
+  "url": "https://simpleonline.tools",
+  "description": "Simple online tools for everyday use",
+  "thumbnail": "/projects/simpleonline-tools.png",
+  "status": "WIP",
+  "opensource": true,
+  "icon": "tdesign:system-log",
+  "tab": [
+    "logos:javascript",
+    "logos:nuxt-icon",
+    "logos:vue",
+    "logos:react",
+    "logos:react-query",
+    "logos:prisma"
+  ]
+}

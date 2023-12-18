@@ -5,7 +5,13 @@ const links = [
   {
     label: '首页',
     icon: 'ph:house-line-bold',
-    click: () => router.push('/')
+    click: () => router.push('/'),
+    url: '/'
+  },
+  {
+    label: '项目',
+    icon: 'ic:baseline-auto-fix-high',
+    url: '/projects'
   },
   {
     label: '文章',
@@ -93,7 +99,7 @@ const handleHome = (index: number) => {
 </script>
 
 <template>
-  <div class="space-x-5">
+  <div class="space-x-5 hidden sm:block">
     <UDropdown
       :ui="ui"
       v-for="(item, index) in links"
@@ -110,18 +116,18 @@ const handleHome = (index: number) => {
         />
         <span class="truncate">{{ item.label }}</span>
       </template>
-      <Icon
-        @click="handleHome(index)"
-        class="text-[#333] dark:text-[#fff]"
-        size="20"
-        :name="item.icon"
-      ></Icon>
-      <span
+
+      <NuxtLink
         class="pl-1"
-        @click="handleHome(index)"
+        :to="item.url"
       >
-        {{ item.label }}</span
-      >
+        <Icon
+          class="text-[#333] dark:text-[#fff]"
+          size="20"
+          :name="item.icon"
+        ></Icon>
+        <span>{{ item.label }}</span>
+      </NuxtLink>
     </UDropdown>
   </div>
 </template>

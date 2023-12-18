@@ -1,0 +1,17 @@
+{
+  "name": "Bring back the bird",
+  "url": "https://github.com/fayazara/bring-back-twitter-bird",
+  "description": "Chrome extension to replace the new Twitter logo with the original bird",
+  "thumbnail": "/projects/twitter.svg",
+  "status": "Active",
+  "opensource": true,
+  "icon": "tdesign:system-log",
+  "tab": [
+    "logos:javascript",
+    "logos:nuxt-icon",
+    "logos:vue",
+    "logos:react",
+    "logos:react-query",
+    "logos:prisma"
+  ]
+}

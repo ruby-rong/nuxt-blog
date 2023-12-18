@@ -1,0 +1,17 @@
+{
+  "name": "Sketch to UI",
+  "url": "https://github.com/fayazara/sketch-to-ui",
+  "description": "Covert bad hand drawn UI sketch to code using GPT 4 Vision model",
+  "thumbnail": "/projects/sketch-to-ui.png",
+  "status": "Active",
+  "opensource": true,
+  "icon": "tdesign:system-log",
+  "tab": [
+    "logos:javascript",
+    "logos:nuxt-icon",
+    "logos:vue",
+    "logos:react",
+    "logos:react-query",
+    "logos:prisma"
+  ]
+}

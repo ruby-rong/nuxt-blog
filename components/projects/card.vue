@@ -38,22 +38,23 @@ const props = defineProps({
   <div
     class="flex h-[180px] cursor-pointer w-[380px] hover:bg-[#f5f5f5] hover:dark:bg-slate-700 justify-between px-4 items-center border dark:border-[#333]"
   >
-    <div class="space-y-1">
+    <div class="space-y-1 flex flex-col justify-between">
       <div class="space-x-4">
         <span class="text-2xl">{{ project.name }}</span>
-        <span class="space-x-2">
-          <Icon
-            size="18"
-            v-for="(item, index) in project.tab"
-            :key="index"
-            :name="item"
-          />
-        </span>
       </div>
       <div>{{ project.description }}</div>
+      <div class="space-x-2">
+        <Icon
+          size="18"
+          v-for="(item, index) in project.tab"
+          :key="index"
+          :name="item"
+        />
+      </div>
     </div>
     <div>
       <Icon
+        class="text-[#666] dark:text-[#fff]"
         size="38"
         :name="project.icon"
       />

@@ -1,9 +1,12 @@
-import type { ProjectsCard } from '#build/components';
+import type { ArtCardLine } from '#build/components';
 <script lang="ts" setup>
-const { data: projects } = await useAsyncData('projects-home', () =>
-  queryContent('/projects').limit(3).find()
+const { data: articles } = await useAsyncData('articles-home', () =>
+  queryContent('/articles')
+    .sort({ published: -1 })
+    .limit(3)
+    .only(['title', 'description', 'published', 'slug', '_path'])
+    .find()
 )
-console.log(projects)
 </script>
 <template>
   <div>
@@ -12,17 +15,18 @@ console.log(projects)
     >
       RECENT ARTICLES
     </h1>
-    <div class="space-y-4">
-      <ProjectsCardLine
-        v-for="(project, id) in projects"
+    <ul class="space-y-16">
+      <li
+        v-for="(article, id) in articles"
         :key="id"
-        :project="project"
-      />
-    </div>
+      >
+        <ArtCardLine :article="article" />
+      </li>
+    </ul>
     <div class="flex items-center justify-center mt-6 text-sm">
       <UButton
         label="All Projects &rarr;"
-        to="/projects"
+        to="/articles/archive"
         variant="link"
         color="gray"
       />

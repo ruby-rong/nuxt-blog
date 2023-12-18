@@ -12,20 +12,20 @@ const { data: projects } = await useAsyncData('projects-all', () =>
 </script>
 
 <template>
-  <div class="bg-pink-300">
+  <div>
     <CommonTitle
       class="mt-12"
       title="Projects"
       :description="description"
     />
-    <div
-      class="flex flex-col flex-wrap sm:flex-row bg-stone-400 items-center gap-4 justify-end"
-    >
-      <ProjectsCard
-        v-for="(item, index) in projects"
-        :key="index"
-        :project="item"
-      />
+    <div class="flex justify-center items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ProjectsCard
+          v-for="(item, index) in projects"
+          :key="index"
+          :project="item"
+        />
+      </div>
     </div>
   </div>
 </template>

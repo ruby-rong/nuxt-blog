@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     preference: 'dark'
   },
   devtools: { enabled: false },
-  css: ['~/static/main.css'],
+  css: ['~/assets/main.css'],
   modules: [
     [
       '@pinia/nuxt',
@@ -39,7 +39,8 @@ export default defineNuxtConfig({
       }
     },
     highlight: {
-      theme: 'github-dark'
+      theme: 'github-dark',
+      preload: ['javascript', 'typescript', 'vue', 'vue-html', 'jsx']
     }
   }
 })

@@ -17,11 +17,11 @@ const props = defineProps<{
       <div class="relative">
         <img
           class="h-[300px] w-full object-cover"
-          src="../static/Images/bg3.jpg"
+          src="../assets/Images/bg3.jpg"
         />
         <div class="absolute bottom-6 left-10">
           <ArtTitle
-            logo="../static/images/ava.jgp"
+            logo="../assets/images/ava.jgp"
             title="关于我"
             subtile="你好321312"
             title-color="#fff"

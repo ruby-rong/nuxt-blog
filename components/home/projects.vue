@@ -1,15 +1,19 @@
+import type { ProjectsCard } from '#build/components';
 <script lang="ts" setup>
 const { data: projects } = await useAsyncData('projects-home', () =>
   queryContent('/projects').limit(3).find()
 )
+console.log(projects)
 </script>
 <template>
   <div>
-    <h2 class="uppercase text-xs font-semibold text-gray-400 mb-6">
+    <h1
+      class="text-xl my-10 font-bold tracking-tight text-gray-800 dark:text-gray-100"
+    >
       FEATURED PROEJCTS
-    </h2>
+    </h1>
     <div class="space-y-4">
-      <AppProjectCard
+      <ProjectsCardLine
         v-for="(project, id) in projects"
         :key="id"
         :project="project"

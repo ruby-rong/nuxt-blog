@@ -2,7 +2,7 @@
   <div>
     <Header class="h-16" />
     <main class="min-h-[calc(100vh-128px)]">
-      <Card class="w-[1000px] m-auto">
+      <Card class="w-full sm:w-[1000px] m-auto">
         <slot />
       </Card>
     </main>

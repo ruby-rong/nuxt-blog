@@ -8,15 +8,17 @@ const links = [
 ]
 </script>
 <template>
-  <div class="space-y-6 relative">
-    <NuxtImg
-      src="/ava.jpg"
-      alt="Ivy Rong"
-      class="ring-2 rounded w-36 border ring-gray-200 border-gray-300 dark:ring-white/10 dark:border-gray-800 hover:ring-4 transition-all duration-300 bg-gray-200 dark:bg-gray-900 absolute right-10 top-0"
-      sizes="64px sm:64px"
-      placeholder
-      format="webp"
-    />
+  <div class="space-y-6">
+    <div class="h-48 flex justify-end items-end">
+      <NuxtImg
+        src="/ava.jpg"
+        alt="Ivy Rong"
+        class="ring-2 rounded w-36 border ring-gray-200 border-gray-300 dark:ring-white/10 dark:border-gray-800 hover:ring-4 transition-all duration-300 bg-gray-200 dark:bg-gray-900"
+        sizes="64px sm:64px"
+        placeholder
+        format="webp"
+      />
+    </div>
     <h1
       class="text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100"
     >

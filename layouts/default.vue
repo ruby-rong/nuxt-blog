@@ -14,11 +14,11 @@ useHead({
 <template>
   <div>
     <Header class="h-16" />
-    <main class="min-h-[calc(100vh-128px)]">
-      <Card class="w-full sm:w-[1000px] m-auto">
+    <UContainer class="min-h-[calc(100vh-128px)]">
+      <div class="w-full sm:w-[800px] m-auto !border-0">
         <slot />
-      </Card>
-    </main>
+      </div>
+    </UContainer>
     <Footer class="h-16" />
   </div>
 </template>

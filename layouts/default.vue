@@ -3,9 +3,9 @@ const route = useRoute()
 console.log(route.meta.title)
 useHead({
   title: `${route.meta.title} ｜ Ivy Rong Blog`,
-  link: [{ rel: 'icon', href: '/cat.png' }],
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
   meta: [
-    { name: 'description', content: '关于我的标题' },
+    { name: 'description', content: 'Ivy Rong' },
     { name: 'keywords', content: '个人博客' }
   ]
 })

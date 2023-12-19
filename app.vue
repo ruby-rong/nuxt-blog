@@ -18,10 +18,12 @@
 .page-leave-to {
   opacity: 0;
   transform: translateY(-5px);
+  filter: blur(1rem);
 }
 
 .page-enter-from {
   opacity: 0;
   transform: translateY(5px);
+  filter: blur(1rem);
 }
 </style>

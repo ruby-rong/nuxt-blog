@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true
   },
-  colorMode: {
-    preference: 'dark'
-  },
+  // colorMode: {
+  //   preference: 'dark'
+  // },
   devtools: { enabled: false },
   css: ['~/assets/main.css'],
   modules: [
@@ -19,7 +19,27 @@ export default defineNuxtConfig({
     ['nuxt-icon', {}],
     ['@nuxt/ui', {}],
     ['@nuxt/image', {}],
-    ['@vueuse/nuxt', {}]
+    ['@vueuse/nuxt', {}],
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Roboto: true,
+          Inter: [400, 700],
+          'Josefin+Sans': true,
+          Lato: [100, 300],
+          Raleway: {
+            wght: [100, 400],
+            ital: [100]
+          },
+          'Crimson Pro': {
+            wght: '200..900',
+            ital: '200..700'
+          },
+          Kalam: true
+        }
+      }
+    ]
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },

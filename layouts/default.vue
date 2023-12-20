@@ -4,6 +4,7 @@ console.log(route.meta.title)
 useHead({
   title: `${route.meta.title} ｜ Ivy Rong Blog`,
   link: [{ rel: 'icon', href: '/favicon.ico' }],
+
   meta: [
     { name: 'description', content: 'Ivy Rong' },
     { name: 'keywords', content: '个人博客' }
@@ -26,5 +27,9 @@ useHead({
 <style lang="postcss">
 body {
   @apply bg-gray-50 text-black dark:bg-gray-900 dark:text-white;
+}
+
+html {
+  font-family: Kalam, sans-serif;
 }
 </style>

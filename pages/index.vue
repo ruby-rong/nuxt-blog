@@ -11,6 +11,7 @@ definePageMeta({
 </script>
 <template>
   <div>
+    <CommonCalendar />
     <HomeIntro />
     <HomeProjects />
     <HomeArticles />

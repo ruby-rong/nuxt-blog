@@ -1,13 +1,17 @@
 ---
-title: "Building Your First API with Express.js: A Beginner's Guide"
-description: "A beginner-friendly guide to building your first API with Express.js"
+title: '一字一句像刀疤'
+description: '我知道你肯定看不到'
 published: 2023/11/2
-slug: "building-your-first-api-with-expressjs-a-beginners-guide"
+slug: 'building-your-first-api-with-expressjs-a-beginners-guide'
 ---
 
 > This article was created using ChatGPT and meant as a placeholder
 
 ## What is Express.js?
+
+你怎么能这样说
+你的一字一句都像刀疤一样
+刻在我身上
 
 Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications. It facilitates the rapid development of Node-based web applications and is widely used to build APIs due to its simplicity and performance.
 

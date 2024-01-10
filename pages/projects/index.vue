@@ -6,9 +6,11 @@ useSeoMeta({
   description
 })
 
-const { data: projects } = await useAsyncData('projects-all', () =>
-  queryContent('/projects').find()
-)
+const { data: projects } = await useAsyncData('projects-all', () => {
+  const a = queryContent('/projects').find()
+  console.log(a, 'a')
+  return a
+})
 </script>
 
 <template>
@@ -24,7 +26,8 @@ const { data: projects } = await useAsyncData('projects-all', () =>
           v-for="(item, index) in projects"
           :key="index"
           :project="item"
-        />
+        >
+        </ProjectsCard>
       </div>
     </div>
   </div>

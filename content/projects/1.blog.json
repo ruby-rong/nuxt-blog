@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "url": "http://localhost:3000/projects",
+  "description": "Personal blog level to record  own learning process",
+  "thumbnail": "/projects/feedbackjar.png",
+  "status": "MIP",
+  "opensource": true,
+  "icon": "tdesign:system-log",
+  "tab": ["logos:nuxt-icon", "logos:vue"]
+}

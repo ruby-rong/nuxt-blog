@@ -32,6 +32,7 @@ const props = defineProps({
     required: true
   }
 })
+//console.log(props.project, 'props')
 </script>
 
 <template>
@@ -59,5 +60,6 @@ const props = defineProps({
         :name="project.icon"
       />
     </div>
+    <slot />
   </div>
 </template>

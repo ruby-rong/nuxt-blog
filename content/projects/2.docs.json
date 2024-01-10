@@ -1,0 +1,9 @@
+{
+  "name": "Docs",
+  "url": "https://github.com/ivy-rong/docs",
+  "description": "Documentation Site Where documents are stored",
+  "thumbnail": "/projects/feedful.png",
+  "status": "Active",
+  "icon": "material-symbols:docs",
+  "tab": ["logos:vue", "logos:typescript-icon", "vitepress"]
+}

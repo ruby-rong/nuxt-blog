@@ -2,7 +2,7 @@
 title: 'npx'
 description: 'npx'
 published: 2024/1/1
-slug: 'ts2'
+slug: 'npx'
 ---
 
 ## 1: nxp 是什么

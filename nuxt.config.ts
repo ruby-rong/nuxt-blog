@@ -62,5 +62,8 @@ export default defineNuxtConfig({
       theme: 'github-dark',
       preload: ['javascript', 'typescript', 'vue', 'vue-html', 'jsx']
     }
+  },
+  build: {
+    transpile: ['echarts', 'zrender', 'tslib']
   }
 })

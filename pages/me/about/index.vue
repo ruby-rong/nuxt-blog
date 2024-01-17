@@ -16,6 +16,7 @@ definePageMeta({
 <template>
   <div>
     关于我
-    <h1>1111{{ route.meta.title }}</h1>
+    <h1>{{ route.meta.title }}</h1>
+    <EchartsCalendar />
   </div>
 </template>

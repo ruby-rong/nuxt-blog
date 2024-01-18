@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["@nuxtjs", "plugin:nuxt/recommended"],
+  "extends": ["@nuxt/eslint-config"],
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",

@@ -1,3 +1,13 @@
+<script setup>
+const route = useRoute()
+const { slug } = route.params
+useSeoMeta({
+  ogImage: ``,
+  twitterCard: '',
+  articleAuthor: 'Ivy Rong'
+})
+</script>
+
 <template>
   <main class="flex justify-center items-center">
     <UCard
@@ -15,15 +25,7 @@
     </UCard>
   </main>
 </template>
-<script setup>
-const route = useRoute()
-const { slug } = route.params
-useSeoMeta({
-  ogImage: ``,
-  twitterCard: '',
-  articleAuthor: 'Ivy Rong'
-})
-</script>
+
 <style>
 .prose h2 a,
 .prose h3 a {

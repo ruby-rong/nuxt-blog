@@ -1,6 +1,6 @@
 ---
-title: '一字一句像刀疤'
-description: ''
+title: 'meant as a placeholder'
+description: 'Express.js is a minimal'
 published: 2023/11/2
 slug: 'building-your-first-api-with-expressjs-a-beginners-guide'
 ---

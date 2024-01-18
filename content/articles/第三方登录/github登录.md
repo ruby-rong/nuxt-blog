@@ -1,9 +1,16 @@
 ---
+title: 'How to convert a SVG to PNG using Canvas'
+description: 'A simple way to convert a SVG to PNG using Canvas'
+published: 2023/11/22
+slug: 'how-to-convert-a-svg-to-png-using-canvas'
+---
+
+<!-- ---
 title: '第三方登录'
 description: 'github 登录'
 published: 2024/01/12
 slug: '第三方登录'
----
+--- -->
 
 ## 一.原理
 

@@ -87,3 +87,10 @@ simpleonline
 tweetdeck
 vitepress
 zrender
+Giscus
+reactionsenabled
+inputposition
+emitmetadata
+crossorigin
+knowledges
+crossorigin

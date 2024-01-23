@@ -94,3 +94,5 @@ emitmetadata
 crossorigin
 knowledges
 crossorigin
+fkey
+pkey

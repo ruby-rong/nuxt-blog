@@ -6,6 +6,9 @@ useSeoMeta({
   twitterCard: '',
   articleAuthor: 'Ivy Rong'
 })
+
+const { root, hasComment } = useComment(tabUrl)
+initViewer(root)
 </script>
 
 <template>

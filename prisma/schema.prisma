@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Message {
+  id       Int     @id @default(autoincrement())
+  userName String  @map("user_name") @db.VarChar(255)
+  orgName  String? @map("org_name") @db.VarChar(255)
+  title    String? @db.VarChar(255)
+  content  String? @db.VarChar(500)
+  reply    Reply[]
+
+  /// 创建时间
+  createdAt DateTime? @default(now()) @map("created_at") @db.Timestamptz(3)
+  /// 创建人
+  createdBy Int?      @map("created_by")
+  /// 更新时间
+  updatedAt DateTime? @updatedAt @map("updated_at") @db.Timestamptz(3)
+  /// 更新人
+  updatedBy Int?      @map("updated_by")
+  /// 删除时间
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz(3)
+  /// 删除人
+  deletedBy Int?      @map("deleted_by")
+}
+
+model Reply {
+  id        Int       @id @default(autoincrement())
+  /// 信息表
+  message   Message   @relation(fields: [messageId], references: [id])
+  /// 消息id
+  messageId Int       @map("message_id")
+  userName  String    @map("user_name") @db.VarChar(255)
+  orgName   String?   @map("org_name") @db.VarChar(255)
+  title     String?   @db.VarChar(255)
+  content   String?   @db.VarChar(500)
+  /// 创建时间
+  createdAt DateTime? @default(now()) @map("created_at") @db.Timestamptz(3)
+  /// 创建人
+  createdBy Int?      @map("created_by")
+  /// 更新时间
+  updatedAt DateTime? @updatedAt @map("updated_at") @db.Timestamptz(3)
+  /// 更新人
+  updatedBy Int?      @map("updated_by")
+  /// 删除时间
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz(3)
+  /// 删除人
+  deletedBy Int?      @map("deleted_by")
+}
+
+model Friends {
+  id          Int     @id @default(autoincrement())
+  nickName    String  @map("nick_name") @db.VarChar(50)
+  siteTitle   String  @map("site_title") @db.VarChar(50)
+  website     String  @db.VarChar(50)
+  avatar      String  @db.VarChar(50)
+  email       String  @db.VarChar(50)
+  description String? @db.VarChar(50)
+  /// 创建时间
+  createdAt DateTime? @default(now()) @map("created_at") @db.Timestamptz(3)
+  /// 创建人
+  createdBy Int?      @map("created_by")
+  /// 更新时间
+  updatedAt DateTime? @updatedAt @map("updated_at") @db.Timestamptz(3)
+  /// 更新人
+  updatedBy Int?      @map("updated_by")
+  /// 删除时间
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz(3)
+  /// 删除人
+  deletedBy Int?      @map("deleted_by")
+
+}

@@ -3,9 +3,7 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true
   },
-  // colorMode: {
-  //   preference: 'dark'
-  // },
+
   devtools: { enabled: false },
   css: ['~/assets/main.css'],
   modules: [

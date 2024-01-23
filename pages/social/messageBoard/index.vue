@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { FormError, FormSubmitEvent } from '#ui/types'
-import type { MessageDto, BasePageModel } from '~/types'
+import type { FormError } from '#ui/types'
+import type { MessageDto, RecordsVo, BasePageModel } from '~/types'
 
 const state = reactive<MessageDto>({
   userName: '',
@@ -14,6 +14,7 @@ const pageModel = reactive<BasePageModel>({
   pageSize: 10
 })
 const totalModel = ref(0)
+//const recordsModel = ref<RecordsVo[]>([])
 
 const validate = (state: any): FormError[] => {
   const errors = []
@@ -22,7 +23,7 @@ const validate = (state: any): FormError[] => {
   return errors
 }
 
-async function onSubmit(event: FormSubmitEvent<any>) {
+async function onSubmit() {
   // Do something with data
   const data = await $fetch('/api/message', {
     method: 'post',
@@ -36,13 +37,14 @@ async function onSubmit(event: FormSubmitEvent<any>) {
 }
 
 async function getList() {
-  // Do something with data
-  // const data = await $fetch('/api/message', {
-  //   method: 'get',
-  //   query: pageModel
-  // })
-  //const { records, total } = data
-  // totalModel.value = total
+  const { page, pageSize, total, records } = await $fetch('/api/message', {
+    method: 'get',
+    query: pageModel
+  })
+  console.log(page, pageSize)
+  totalModel.value = total
+  //recordsModel.value = records
+  console.log(records)
   // console.log(records, 'getList')
 }
 
@@ -54,7 +56,7 @@ onMounted(() => {
   <div>
     <div class="text-xl py-2">发表留言</div>
 
-    <div>
+    <div class="mb-16">
       <UForm
         :validate="validate"
         :state="state"

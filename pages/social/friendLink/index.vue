@@ -1,14 +1,7 @@
-<script setup lang="ts">
-const value = ref('')
-</script>
+<script setup lang="ts"></script>
 <template>
   <div>
-    <div>发表留言</div>
-    <div>
-      <UInput v-model="value" />
-      <UInput v-model="value" />
-      <UInput v-model="value" />
-      <UTextarea v-model="value" />
-    </div>
+    <div class="py-2 text-xl">友情连接</div>
+    <SocialFriend />
   </div>
 </template>

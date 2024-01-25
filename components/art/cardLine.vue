@@ -10,10 +10,8 @@
         ><span
           class="absolute inset-y-0 left-0 flex items-center"
           aria-hidden="true"
-          ><span
-            class="h-4 w-0.5 rounded-full bg-gray-200 dark:bg-gray-500"
-          ></span
-        ></span>
+          ><span class="h-4 w-0.5 rounded-full bg-gray-200 dark:bg-gray-500"
+        /></span>
         {{ getReadableDate(article.published) }}
       </time>
       <h2

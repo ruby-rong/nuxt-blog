@@ -30,11 +30,11 @@ console.log(articles)
     </ul>
     <Giscus
       id="comments"
-      defaultCommentOrder="newest"
+      default-comment-order="newest"
       repo="ivy-rong/nuxt-blog"
-      repoId="R_kgDOK6McQw"
+      repo-id="R_kgDOK6McQw"
       category="Comments"
-      categoryId="Comments"
+      category-id="Comments"
       mapping="title"
       strict="0"
       reactionsenabled="1"

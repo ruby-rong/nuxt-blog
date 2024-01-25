@@ -3,12 +3,9 @@ const route = useRoute()
 const { slug } = route.params
 useSeoMeta({
   ogImage: ``,
-  twitterCard: '',
+  twitterCard: slug,
   articleAuthor: 'Ivy Rong'
 })
-
-const { root, hasComment } = useComment(tabUrl)
-initViewer(root)
 </script>
 
 <template>

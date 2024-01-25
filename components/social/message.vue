@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ReplyVo } from '~/types'
 import ChildrenMsg from './childrenMsg.vue'
 const props = defineProps<{
   id: number
@@ -7,8 +8,12 @@ const props = defineProps<{
   orgName?: string
   title?: string
   createdAt: Date
-  children?: any[]
+  reply?: ReplyVo[]
 }>()
+const showReply = ref(false)
+const handleReply = () => {
+  showReply.value = !showReply.value
+}
 </script>
 
 <template>
@@ -43,10 +48,31 @@ const props = defineProps<{
             size="24"
             class="text-[#666] dark:text-[#fff] cursor-pointer"
             name="mdi:message-reply-text-outline"
+            @click="handleReply"
           />
         </div>
       </div>
-      <ChildrenMsg />
+      <div v-if="showReply">
+        <SocialBoard :message-id="props.id" />
+      </div>
+      <div
+        v-if="reply && reply.length > 0"
+        class="space-y-2"
+      >
+        <div
+          v-for="item in reply"
+          :key="item.id"
+        >
+          <ChildrenMsg
+            :id="item.id"
+            :user-name="item.userName"
+            :content="item.content"
+            :org-name="item.orgName"
+            :title="item.title"
+            :created-at="item.createdAt as Date"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -46,6 +46,9 @@ export class MessageApi {
     return await prisma.message.delete({
       where: {
         id
+      },
+      include: {
+        reply: true
       }
     })
   }

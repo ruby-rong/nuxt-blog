@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   id?: number
   userName?: string
   content?: string
@@ -10,7 +10,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex rounded w-full bg-slate-100 dark:bg-slate-800 pt-2 pb-6 gap-2">
+  <div class="flex rounded w-full bg-slate-100 dark:bg-slate-800 p-2 gap-2">
     <div class="w-16 h-16 bg-slate-300 rounded-full" />
     <div class="space-y-1">
       <div class="space-x-2 text-sm text-[#999] dark:text-[#fff]">

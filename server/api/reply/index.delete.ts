@@ -1,4 +1,4 @@
-import { MessageApi } from '~/api'
+import { ReplyApi } from '~/api'
 
 export default defineEventHandler(async (event) => {
   const id = parseInt(event.context.param?.id) as number
@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     })
   }
   try {
-    const data = await MessageApi.delete(id)
+    const data = await ReplyApi.delete(id)
     return {
       ...data
     }

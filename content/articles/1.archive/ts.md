@@ -1,8 +1,8 @@
 ---
-title: 'ts2'
+title: 'ts'
 description: 'A simple way to convert a SVG to PNG using Canvas'
 published: 2023/11/22
-slug: 'ts2'
+slug: 'ts'
 ---
 
 > This article was created using ChatGPT and meant as a placeholder

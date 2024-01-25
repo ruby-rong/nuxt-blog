@@ -2,11 +2,11 @@ import type { ReplyDto, UpdateReplyDto } from '~/types'
 import { prisma } from './prisma'
 
 export class ReplyApi {
-  static async create(messageId: number, replyDto: ReplyDto) {
+  static async create(id: number, replyDto: ReplyDto) {
     return await prisma.reply.create({
       data: {
         ...replyDto,
-        messageId
+        messageId: Number(id)
       }
     })
   }

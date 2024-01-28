@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Theme, Nav, MobileNav } from './components'
+import { Theme, Nav, MobileNav, Github } from './components'
 </script>
 
 <template>
@@ -9,7 +9,8 @@ import { Theme, Nav, MobileNav } from './components'
       <span> Ivy Rong</span>
     </div>
     <Nav />
-    <div>
+    <div class="flex justify-center items-center gap-2">
+      <Github />
       <Theme />
     </div>
   </div>

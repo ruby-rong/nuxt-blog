@@ -1,10 +1,10 @@
 {
-  "name": "Hawa",
+  "name": "meet_room",
   "url": "https://github.com/ivy-rong/meet_room",
-  "description": "Conference room management system",
+  "description": "A conference room system using react ",
   "thumbnail": "/projects/hawa.png",
   "status": "Active",
   "opensource": true,
   "icon": "tdesign:system-log",
-  "tab": ["logos:typescript-icon", "logos:react", "logos:react-query", "logos:prisma"]
+  "tab": ["logos:typescript-icon", "logos:react", "logos:react-query"]
 }

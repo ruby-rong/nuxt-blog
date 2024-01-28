@@ -1,17 +1,10 @@
 {
-  "name": "Simple Online Tools",
-  "url": "https://simpleonline.tools",
-  "description": "Simple online tools for everyday use",
+  "name": "meet_room_server",
+  "url": "https://github.com/ivy-rong/meet_room_server",
+  "description": "A conference room system backend using nest",
   "thumbnail": "/projects/simpleonline-tools.png",
   "status": "WIP",
   "opensource": true,
   "icon": "tdesign:system-log",
-  "tab": [
-    "logos:javascript",
-    "logos:nuxt-icon",
-    "logos:vue",
-    "logos:react",
-    "logos:react-query",
-    "logos:prisma"
-  ]
+  "tab": ["logos:typescript", "logos:mysql"]
 }

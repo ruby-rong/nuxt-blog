@@ -10,5 +10,8 @@ export default defineAppConfig({
   ui: {
     primary: 'purple',
     gray: 'cool'
+  },
+  umami: {
+    // ...umami config here
   }
 })

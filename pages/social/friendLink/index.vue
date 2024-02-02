@@ -37,7 +37,7 @@ async function getList() {
   })
   console.log(data, 'data-data')
 
-  // const { page, pageSize, total, records } = await $fetch('/api/firends', {
+  // const { page, pageSize, total, records } = await $fetch('/api/friends', {
   //   method: 'get',
   //   query: pageModel
   // })

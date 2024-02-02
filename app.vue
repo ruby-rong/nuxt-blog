@@ -1,7 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+function complexCalc() {
+  // ... do something
+  umTrackEvent('complex-btn', { propA: 1, propB: 'two', propC: false })
+}
+</script>
+
 <template>
   <NuxtLoadingIndicator color="#14b8a6" />
   <Body>
+    <button @click="umTrackEvent('button-1')">Button 1</button>
+    <button @click="complexCalc">Button 2</button>
+    <button v-umami="'Event-Name'">Event Button</button>
+
+    <button v-umami="{ name: 'Event-Name' }">as object</button>
     <NuxtLayout>
       <!-- <NuxtLoadingIndicator /> -->
       <NuxtPage />

@@ -5,7 +5,7 @@ published: 2024/1/1
 slug: 'npx'
 ---
 
-## 1: nxp 是什么
+## 1: npx 是什么
 
 命令行工具
 

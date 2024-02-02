@@ -94,13 +94,11 @@ emitmetadata
 crossorigin
 knowledges
 crossorigin
-<<<<<<< Updated upstream
 fkey
 pkey
-=======
 autoincrement
 Timestamptz
 datasource
 pkey
 fkey
->>>>>>> Stashed changes
+umami

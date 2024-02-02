@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true
   },
+  extends: ['nuxt-umami'],
 
   devtools: { enabled: false },
   css: ['~/assets/main.css'],

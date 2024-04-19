@@ -24,11 +24,11 @@ const validate = (state: any): FormError[] => {
   return errors
 }
 
-async function onSubmit(event: FormSubmitEvent<any>) {
-  // Do something with data
-  console.log(event.data)
-  addFriends()
-}
+// async function onSubmit(event: FormSubmitEvent<any>) {
+//   // Do something with data
+//   console.log(event.data)
+//   addFriends()
+// }
 
 async function getList() {
   const data = await $fetch('/api/friends', {
@@ -46,13 +46,13 @@ async function getList() {
   // recordsModel.value = records as unknown as RecordsVo[]
 }
 
-async function addFriends() {
-  const data = await $fetch('/api/friends', {
-    method: 'post',
-    body: state
-  })
-  console.log(data, 'addFriends')
-}
+// async function addFriends() {
+//   const data = await $fetch('/api/friends', {
+//     method: 'post',
+//     body: state
+//   })
+//   console.log(data, 'addFriends')
+// }
 onMounted(() => {
   getList()
 })
@@ -66,8 +66,8 @@ onMounted(() => {
       :validate="validate"
       :state="state"
       class="space-y-4"
-      @submit="onSubmit"
     >
+      <!-- @submit="onSubmit" -->
       <UFormGroup name="nickName">
         <UInput
           v-model="state.nickName"

@@ -92,9 +92,9 @@ const links = [
 <template>
   <div class="space-x-5 hidden sm:block">
     <UDropdown
-      :ui="ui"
       v-for="(item, index) in links"
       :key="index"
+      :ui="ui"
       mode="hover"
       :items="item.children"
       :popper="{ placement: 'bottom' }"
@@ -117,7 +117,7 @@ const links = [
             class="text-[#333] dark:text-[#fff]"
             size="20"
             :name="item.icon"
-          ></Icon>
+          />
           <span>{{ item.label }}</span>
         </div>
       </NuxtLink>

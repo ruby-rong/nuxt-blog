@@ -123,3 +123,4 @@ ZUNION
 ZUNIONSTORE
 zustand
 unshift
+supabase

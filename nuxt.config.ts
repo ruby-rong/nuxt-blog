@@ -38,7 +38,8 @@ export default defineNuxtConfig({
           Kalam: true
         }
       }
-    ]
+    ],
+    '@nuxtjs/supabase'
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -64,5 +65,35 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['echarts', 'zrender', 'tslib']
+  },
+  supabase: {
+    // Options
+    redirect: false,
+    redirectOptions: {
+      login: '/1234',
+      callback: '/confirm',
+      include: undefined,
+      exclude: [],
+      cookieRedirect: false
+    }
+  },
+  routeRules: {
+    '/api': {
+      cors: true,
+      headers: {
+        'access-control-allow-methods': 'GET,HEAD,PATCH,POST,DELETE',
+        'access-control-allow-origin': 'http://localhost:3001',
+        'access-control-allow-credentials': 'true'
+      }
+    }
   }
+
+  // proxy: {
+  //   '/api': {
+  //     target: 'https://blog.ivyrong.xyz',
+  //     pathRewrite: {
+  //       '^/api': '/api'
+  //     }
+  //   }
+  // }
 })

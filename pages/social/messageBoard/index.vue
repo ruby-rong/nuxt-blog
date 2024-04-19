@@ -8,34 +8,34 @@ const pageModel = reactive<BasePageModel>({
 const totalModel = ref(0)
 const recordsModel = ref<RecordsVo[]>([])
 
-async function getList() {
-  const { page, pageSize, total, records } = await $fetch('/api/message', {
-    method: 'get',
-    query: pageModel
-  })
-  console.log(page, pageSize)
-  totalModel.value = total
-  recordsModel.value = records as unknown as RecordsVo[]
-}
-const handleUpdateList = (e: any) => {
-  console.log(e, 'eee')
-  getList()
-}
+// async function getList() {
+//   const { page, pageSize, total, records } = await $fetch('/api/message', {
+//     method: 'get',
+//     query: pageModel
+//   })
+//   console.log(page, pageSize)
+//   totalModel.value = total
+//   recordsModel.value = records as unknown as RecordsVo[]
+// }
+// const handleUpdateList = (e: any) => {
+//   console.log(e, 'eee')
+//   getList()
+// }
 
-const handlePage = (r: any) => {
-  console.log(r, 'r')
-}
+// const handlePage = (r: any) => {
+//   console.log(r, 'r')
+// }
 
-onMounted(() => {
-  getList()
-})
+// onMounted(() => {
+//   getList()
+// })
 </script>
 <template>
   <div>
     <div class="text-xl py-2">发表留言</div>
 
     <div class="mb-16">
-      <SocialBoard @change="handleUpdateList" />
+      <!-- <SocialBoard @change="handleUpdateList" /> -->
     </div>
     <div
       v-for="item in recordsModel"
@@ -55,12 +55,12 @@ onMounted(() => {
       v-if="totalModel > 0"
       class="flex py-2 justify-center"
     >
-      <UPagination
+      <!-- <UPagination
         v-model="pageModel.page"
         :page-count="pageModel.pageSize"
         :total="totalModel"
         @chick="handlePage"
-      />
+      /> -->
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "url": "http://localhost:3000/projects",
+  "url": "https://github.com/ivy-rong/nuxt-blog",
   "description": "Personal blog level to record  own learning process",
   "thumbnail": "/projects/feedbackjar.png",
   "status": "MIP",

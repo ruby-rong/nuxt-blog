@@ -20,6 +20,7 @@ useHead({
         <slot />
       </div>
     </UContainer>
+
     <Footer class="h-16" />
   </div>
 </template>

@@ -3,13 +3,11 @@ import type { ProjectsCard } from '#build/components';
 const { data: projects } = await useAsyncData('projects-home', () =>
   queryContent('/projects').limit(3).find()
 )
-console.log(projects)
+console.log(projects, '11111')
 </script>
 <template>
   <div>
-    <h1
-      class="text-xl my-10 font-bold tracking-tight text-gray-800 dark:text-gray-100"
-    >
+    <h1 class="text-xl my-10 font-bold tracking-tight text-gray-800 dark:text-gray-100">
       FEATURED PROEJCTS
     </h1>
     <div class="space-y-4">

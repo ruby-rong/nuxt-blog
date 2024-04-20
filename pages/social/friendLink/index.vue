@@ -53,65 +53,86 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <div class="py-2 text-xl">友情连接</div>
-    <SocialFriend />
-
-    <UForm
-      :on-submit="addFriends"
-      :validate="validate"
-      :state="state"
-      class="space-y-4"
-    >
-      <!-- @submit="onSubmit" -->
-      <UFormGroup name="nickName">
-        <UInput
-          v-model="state.nickName"
-          placeholder="昵称"
-        />
-      </UFormGroup>
-
-      <UFormGroup name="siteTitle">
-        <UInput
-          v-model="state.siteTitle"
-          placeholder="站点标题"
-          icon="i-heroicons-envelope"
-        />
-      </UFormGroup>
-
-      <UFormGroup name="website">
-        <UInput
-          v-model="state.website"
-          placeholder="网站链接"
-        />
-      </UFormGroup>
-
-      <UFormGroup name="avatar">
-        <UInput
-          v-model="state.avatar"
-          placeholder="头像链接"
-        />
-      </UFormGroup>
-
-      <UFormGroup name="email">
-        <UInput
-          v-model="state.email"
-          placeholder="头像链接"
-        />
-      </UFormGroup>
-
-      <UFormGroup name="description">
-        <UTextarea
-          v-model="state.description"
-          placeholder="描述"
-        />
-      </UFormGroup>
-
-      <UButton
-        type="submit"
-        @click="addFriends"
+    <div class="space-y-4 mb-8">
+      <div class="text-xl font-bold mt-8">朋友们</div>
+      <div class="text-base text-slate-300 dark:text-white">海内存知己 天涯若比邻</div>
+    </div>
+    <div>
+      <div class="py-2">
+        <!-- <span class="text-green-600 font-bold pr-4">|</span> -->
+        <span>我的朋友</span>
+      </div>
+      <div
+        class="mb-5 flex flex-col gap-4 sm:flex-row sm:flex-wrap justify-center sm:justify-between items-center"
       >
-        Submit
-      </UButton>
-    </UForm>
+        <SocialFriend />
+        <SocialFriend />
+        <SocialFriend />
+      </div>
+    </div>
+
+    <div>
+      <div class="py-2">
+        <!-- <span class="w-[4px] mr-2 h-[2px] border bg-green-400" /> -->
+        <span>我想和你交朋友</span>
+      </div>
+      <UForm
+        :on-submit="addFriends"
+        :validate="validate"
+        :state="state"
+        class="space-y-4"
+      >
+        <!-- @submit="onSubmit" -->
+        <UFormGroup name="nickName">
+          <UInput
+            v-model="state.nickName"
+            placeholder="昵称"
+          />
+        </UFormGroup>
+
+        <UFormGroup name="siteTitle">
+          <UInput
+            v-model="state.siteTitle"
+            placeholder="站点标题"
+            icon="i-heroicons-envelope"
+          />
+        </UFormGroup>
+
+        <UFormGroup name="website">
+          <UInput
+            v-model="state.website"
+            placeholder="网站链接"
+          />
+        </UFormGroup>
+
+        <UFormGroup name="avatar">
+          <UInput
+            v-model="state.avatar"
+            placeholder="头像链接"
+          />
+        </UFormGroup>
+
+        <UFormGroup name="email">
+          <UInput
+            v-model="state.email"
+            placeholder="头像链接"
+          />
+        </UFormGroup>
+
+        <UFormGroup name="description">
+          <UTextarea
+            v-model="state.description"
+            placeholder="描述"
+          />
+        </UFormGroup>
+
+        <UButton
+          type="submit"
+          @click="addFriends"
+        >
+          Submit
+        </UButton>
+      </UForm>
+    </div>
   </div>
 </template>

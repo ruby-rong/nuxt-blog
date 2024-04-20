@@ -36,23 +36,17 @@ async function getList() {
     query: pageModel
   })
   console.log(data, 'data-data')
-
-  // const { page, pageSize, total, records } = await $fetch('/api/friends', {
-  //   method: 'get',
-  //   query: pageModel
-  // })
-  // console.log(page, pageSize)
-  // totalModel.value = total
-  // recordsModel.value = records as unknown as RecordsVo[]
 }
 
-// async function addFriends() {
-//   const data = await $fetch('/api/friends', {
-//     method: 'post',
-//     body: state
-//   })
-//   console.log(data, 'addFriends')
-// }
+async function addFriends() {
+  console.log(state, 'state-state')
+  const { prismaData } = await $fetch('/api/friends', {
+    method: 'post',
+    body: state
+  })
+  console.log(prismaData, 'addFriends')
+}
+
 onMounted(() => {
   getList()
 })
@@ -61,8 +55,9 @@ onMounted(() => {
   <div>
     <div class="py-2 text-xl">友情连接</div>
     <SocialFriend />
-    <div class="text-xl py-2">我想和你交朋友</div>
+
     <UForm
+      :on-submit="addFriends"
       :validate="validate"
       :state="state"
       class="space-y-4"
@@ -111,7 +106,12 @@ onMounted(() => {
         />
       </UFormGroup>
 
-      <UButton type="submit"> Submit </UButton>
+      <UButton
+        type="submit"
+        @click="addFriends"
+      >
+        Submit
+      </UButton>
     </UForm>
   </div>
 </template>

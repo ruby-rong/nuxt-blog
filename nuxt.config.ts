@@ -70,7 +70,7 @@ export default defineNuxtConfig({
     // Options
     redirect: false,
     redirectOptions: {
-      login: '/1234',
+      login: '/',
       callback: '/confirm',
       include: undefined,
       exclude: [],

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { FriendsDto } from '~/types'
+
 const url = '../../assets/images/ava.jpg'
 
 defineProps<{
@@ -8,11 +10,12 @@ defineProps<{
   website?: string
   avatar?: string
   email?: Date
+  data: FriendsDto
 }>()
 </script>
 <template>
   <NuxtLink
-    to="https://twitter.com/nuxt_js"
+    :to="data.website"
     target="_blank"
   >
     <div
@@ -22,7 +25,7 @@ defineProps<{
         class="w-20 h-20 rounded-full border-pink-200 border-4 text-white text-center leading-20"
       >
         <NuxtImg
-          src="/ava.jpg"
+          :src="data.avatar || '/ava.jpg'"
           placeholder
           format="webp"
           sizes="80px"
@@ -31,8 +34,10 @@ defineProps<{
       </div>
 
       <div class="space-y-1 w-[80%] overflow-hidden whitespace-nowrap overflow-ellipsis">
-        <div class="font-semibold text-xl">喵小博客</div>
-        <small class="">缘，妙不可言</small>
+        <div class="font-semibold text-xl">
+          {{ data.siteTitle }}
+        </div>
+        <small class="">{{ data.description }}</small>
       </div>
     </div>
   </NuxtLink>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
-import type { RecordsVo, BasePageModel } from '~/types'
+import type { RecordsVo, BasePageModel, FriendsDto } from '~/types'
 
-const state = reactive({
+const state = reactive<FriendsDto>({
   nickName: '',
   siteTitle: '',
   website: '',
@@ -15,11 +15,14 @@ const pageModel = reactive<BasePageModel>({
   pageSize: 10
 })
 const totalModel = ref(0)
-const recordsModel = ref<RecordsVo[]>([])
+const recordsModel = ref<FriendsDto[]>([])
 
 const validate = (state: any): FormError[] => {
   const errors = []
+  if (!state.nickName) errors.push({ path: 'nickName', message: 'Required' })
+  if (!state.siteTitle) errors.push({ path: 'siteTitle', message: 'Required' })
   if (!state.email) errors.push({ path: 'email', message: 'Required' })
+  if (!state.avatar) errors.push({ path: 'avatar', message: 'Required' })
   if (!state.website) errors.push({ path: 'website', message: 'Required' })
   return errors
 }
@@ -35,7 +38,8 @@ async function getList() {
     method: 'get',
     query: pageModel
   })
-  console.log(data, 'data-data')
+  console.log(data, 'data-data', Array.isArray(data.records))
+  recordsModel.value = data.records
 }
 
 async function addFriends() {
@@ -45,6 +49,17 @@ async function addFriends() {
     body: state
   })
   console.log(prismaData, 'addFriends')
+  state.avatar = ''
+  state.email = ''
+  state.nickName = ''
+  state.siteTitle = ''
+  state.website = ''
+  state.description = ''
+}
+
+const submit = async () => {
+  await addFriends()
+  await getList()
 }
 
 onMounted(() => {
@@ -65,9 +80,16 @@ onMounted(() => {
       <div
         class="mb-5 flex flex-col gap-4 sm:flex-row sm:flex-wrap justify-center sm:justify-between items-center"
       >
-        <SocialFriend />
-        <SocialFriend />
-        <SocialFriend />
+        <div
+          v-for="item in recordsModel"
+          :key="item.id"
+        />
+
+        <SocialFriend
+          v-for="item in recordsModel"
+          :key="item.id"
+          :data="item"
+        />
       </div>
     </div>
 
@@ -77,7 +99,7 @@ onMounted(() => {
         <span>我想和你交朋友</span>
       </div>
       <UForm
-        :on-submit="addFriends"
+        :on-submit="submit"
         :validate="validate"
         :state="state"
         class="space-y-4"
@@ -115,20 +137,21 @@ onMounted(() => {
         <UFormGroup name="email">
           <UInput
             v-model="state.email"
-            placeholder="头像链接"
+            placeholder="邮箱"
           />
         </UFormGroup>
 
         <UFormGroup name="description">
-          <UTextarea
+          <!-- <UTextarea
             v-model="state.description"
             placeholder="描述"
-          />
+            type="textarea"
+          /> -->
         </UFormGroup>
 
         <UButton
           type="submit"
-          @click="addFriends"
+          @click="submit"
         >
           Submit
         </UButton>

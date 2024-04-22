@@ -10,7 +10,17 @@ useSeoMeta({
 const { data: articles } = await useAsyncData('all-articles', () =>
   queryContent('/articles').find()
 )
-console.log(articles)
+
+// const articles = ref<any>([])
+// const fetchProjects = async () => {
+//   const { data } = await useAsyncData('all-articles', () => queryContent('/articles').find())
+//   // 更新projects的值
+//   articles.value = data
+// }
+
+// onMounted(() => {
+//   fetchProjects()
+// })
 </script>
 
 <template>

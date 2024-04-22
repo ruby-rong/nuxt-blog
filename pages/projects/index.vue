@@ -7,26 +7,34 @@ useSeoMeta({
 })
 
 // 初始化projects为一个响应式的ref
-const projects = ref([])
-// 定义获取projects数据的函数
-const fetchProjects = async () => {
-  const { data } = await useAsyncData('projects-all', () => {
-    return queryContent('/projects').find()
-  })
-  // 更新projects的值
-  projects.value = data
-}
+// const projects = ref([])
+// // 定义获取projects数据的函数
+// const fetchProjects = async () => {
+//   const data = await useAsyncData('projects-all', () => {
+//     return queryContent('/projects').find()
+//   })
+//   // 更新projects的值
+//   console.log(data, 'data')
+//   projects.value = data
+//   console.log(projects.value, 'projects')
+// }
 
-// const { data: projects } = await useAsyncData('projects-all', () => {
-//   // debugger
-//   const a = queryContent('/projects').find()
-//   console.log(a, 'a')
-//   return a
+const { data: projects } = await useAsyncData(
+  'projects-all',
+  () => {
+    // debugger
+    const a = queryContent('/projects').find()
+    console.log(a, 'a')
+    return a
+  },
+  {
+    lazy: true
+  }
+)
+
+// onMounted(() => {
+//   fetchProjects()
 // })
-
-onMounted(() => {
-  fetchProjects()
-})
 </script>
 
 <template>

@@ -1,9 +1,20 @@
-import type { ProjectsCard } from '#build/components';
 <script lang="ts" setup>
 const { data: projects } = await useAsyncData('projects-home', () =>
   queryContent('/projects').limit(3).find()
 )
-console.log(projects, '11111')
+
+// 定义获取projects数据的函数
+
+// const projects = ref<any>([])
+// const fetchProjects = async () => {
+//   const { data } = await useAsyncData('projects-home', () =>
+//     queryContent('/projects').limit(3).find()
+//   )
+//   // 更新projects的值
+//   projects.value = data
+// }
+
+// onMounted(fetchProjects)
 </script>
 <template>
   <div>

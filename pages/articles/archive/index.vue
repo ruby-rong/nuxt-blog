@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Giscus from '@giscus/vue'
+// import Giscus from '@giscus/vue'
 const description =
   'All of my long-form thoughts on programming, user interfaces, product design, and more, collected in chronological order.'
 useSeoMeta({
@@ -38,7 +38,7 @@ const { data: articles } = await useAsyncData('all-articles', () =>
         <ArtCardLine :article="article" />
       </li>
     </ul>
-    <Giscus
+    <!-- <Giscus
       id="comments"
       default-comment-order="newest"
       repo="ivy-rong/nuxt-blog"
@@ -54,6 +54,6 @@ const { data: articles } = await useAsyncData('all-articles', () =>
       crossorigin="anonymous"
       lang="zh-CN"
       loading="lazy"
-    />
+    /> -->
   </main>
 </template>

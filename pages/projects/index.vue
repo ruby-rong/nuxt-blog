@@ -24,7 +24,7 @@ const { data: projects } = await useAsyncData(
   () => {
     // debugger
     const a = queryContent('/projects').find()
-    console.log(a, 'a')
+    console.log('a', a)
     return a
   },
   {

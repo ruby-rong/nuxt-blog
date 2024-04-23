@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   typescript: {
     typeCheck: true
   },
@@ -86,14 +87,20 @@ export default defineNuxtConfig({
         'access-control-allow-credentials': 'true'
       }
     }
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
   }
 
-  // proxy: {
-  //   '/api': {
-  //     target: 'https://blog.ivyrong.xyz',
-  //     pathRewrite: {
-  //       '^/api': '/api'
-  //     }
+  // nitro: {
+  //   static: true,
+  //   prerender: {
+  //     failOnError: false,
+  //     crawlLinks: true,
+  //     concurrency: 12,
   //   }
-  // }
+  // },
 })

@@ -48,7 +48,7 @@ const { data: projects } = await useAsyncData(
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <ContentDoc />
-          <span>ContentDoc</span>
+          <span />
         </div>
         <ProjectsCard
           v-for="(item, index) in projects"

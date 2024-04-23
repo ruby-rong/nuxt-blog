@@ -8,12 +8,12 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ['~/assets/main.css'],
   modules: [
-    [
-      '@pinia/nuxt',
-      {
-        autoImports: ['defineStore']
-      }
-    ],
+    // [
+    //   '@pinia/nuxt',
+    //   {
+    //     autoImports: ['defineStore']
+    //   }
+    // ],
     ['@nuxt/content', {}],
     ['nuxt-icon', {}],
     ['@nuxt/ui', {}],

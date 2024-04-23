@@ -18,8 +18,8 @@ useSeoMeta({
 //   projects.value = data
 //   console.log(projects.value, 'projects')
 // }
-let projectsData = await queryContent('/projects').find()
-console.log(projectsData, 'projectsData')
+// let projectsData = await queryContent('/projects').find()
+// console.log(projectsData, 'projectsData')
 
 const { data: projects } = await useAsyncData(
   'projects-all',

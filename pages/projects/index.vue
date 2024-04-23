@@ -48,11 +48,11 @@ const { data: projects } = await useAsyncData(
     />
     <div class="flex justify-center items-center">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
+        <!-- <div>
           <ContentDoc />
           {{ projectsData }}
           <span />
-        </div>
+        </div> -->
         <ProjectsCard
           v-for="(item, index) in projects"
           :key="index"

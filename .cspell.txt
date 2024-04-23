@@ -124,3 +124,4 @@ ZUNIONSTORE
 zustand
 unshift
 supabase
+nitropack

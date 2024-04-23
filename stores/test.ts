@@ -1,17 +1,17 @@
-export const useExample = defineStore('example', () => {
-  const user = ref(1)
+// export const useExample = defineStore('example', () => {
+//   const user = ref(1)
 
-  const handleUser = () => {
-    user.value = user.value++
-  }
+//   const handleUser = () => {
+//     user.value = user.value++
+//   }
 
-  const test = () => {
-    console.log('test')
-  }
+//   const test = () => {
+//     console.log('test')
+//   }
 
-  return {
-    user,
-    handleUser,
-    test
-  }
-})
+//   return {
+//     user,
+//     handleUser,
+//     test
+//   }
+// })

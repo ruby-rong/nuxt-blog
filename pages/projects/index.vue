@@ -18,6 +18,8 @@ useSeoMeta({
 //   projects.value = data
 //   console.log(projects.value, 'projects')
 // }
+let projectsData = await queryContent('/projects').find()
+console.log(projectsData, 'projectsData')
 
 const { data: projects } = await useAsyncData(
   'projects-all',
@@ -48,6 +50,7 @@ const { data: projects } = await useAsyncData(
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <ContentDoc />
+          {{ projectsData }}
           <span />
         </div>
         <ProjectsCard

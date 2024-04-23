@@ -90,17 +90,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    static: true,
     prerender: {
-      crawlLinks: true
+      failOnError: false,
+      crawlLinks: true,
+      concurrency: 12
     }
   }
-
-  // nitro: {
-  //   static: true,
-  //   prerender: {
-  //     failOnError: false,
-  //     crawlLinks: true,
-  //     concurrency: 12,
-  //   }
-  // },
 })

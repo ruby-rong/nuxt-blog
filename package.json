@@ -34,7 +34,8 @@
     "typescript": "^5.4.5",
     "vue": "^3.4.24",
     "vue-eslint-parser": "^9.4.2",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue-tsc": "^2.0.14"
   },
   "dependencies": {
     "@giscus/vue": "^3.0.0",

@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "src": "/api/friends", "dest": "/api/friends" },
+    { "src": "/api/*", "dest": "/api/index.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "rewrites": [
+    { "source": "/api/friends", "destination": "/api/friends" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

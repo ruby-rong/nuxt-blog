@@ -1,6 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/api/friends", "destination": "/api/friends" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/api/friends", "destination": "/api/friends" }]
 }

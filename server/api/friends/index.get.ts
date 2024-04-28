@@ -1,6 +1,5 @@
 import type { BasePageModel } from '~/types'
 import { prisma } from '~/api/prisma'
-// import type { Prisma } from '@prisma/client'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event) as BasePageModel
@@ -18,6 +17,7 @@ export default defineEventHandler(async (event) => {
     })
     const total = await prisma.friends.count({ where })
     setResponseStatus(event, 200)
+    // console.log('Success')
     return {
       records,
       total,
@@ -25,6 +25,7 @@ export default defineEventHandler(async (event) => {
       pageSize
     }
   } catch {
+    // console.log('error')
     throw createError({
       statusCode: 400,
       statusMessage: '查找失败'
